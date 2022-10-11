@@ -1,0 +1,10 @@
+theme = "gruvbox"
+
+[editor]
+cursorline = true
+
+[editor.indent-guides]
+render = true
+
+[editor.lsp]
+display-messages = true
