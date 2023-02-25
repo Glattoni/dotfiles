@@ -1,0 +1,35 @@
+/* font_family      Caskaydia Cove Nerd Font */
+/* bold_font        Caskaydia Cove Nerd Font */
+/* italic_font      Caskaydia Cove Nerd Font */
+/* bold_italic_font Caskaydia Cove Nerd Font */
+
+font_family      MonoLisa 
+/* font_family      MonoLisa  */
+/* bold_font        MonoLisa */
+/* italic_font      MonoLisa */
+/* bold_italic_font MonoLisa */
+
+font_size 12.0
+/* adjust_line_height 16  */
+
+/* placement_strategy top-left */
+
+window_border_width 2
+
+window_margin_width 0
+
+window_padding_width 2
+
+draw_minimal_borders no
+
+linux_display_server x11
+update_check_interval 0
+
+disable-ligatures never
+
+
+
+# BEGIN_KITTY_THEME
+# Gruvbox Dark
+include current-theme.conf
+# END_KITTY_THEME
