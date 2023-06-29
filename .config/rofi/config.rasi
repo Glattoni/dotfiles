@@ -1,11 +1,11 @@
 configuration {
   display-drun: "Applicatons:";
   display-window: "Windows:";
-  drun-display-format: "{icon} {name}";
+  drun-display-format: "{icon}  {name}";
   font: "Hack Nerd Font 12";
   modi: "window,run,drun";
   show-icons: true;
-  icon-theme: "Papirus";
+  icon-theme: "kora-pgrey";
 }
 
 @theme "~/.config/rofi/theme.rasi"

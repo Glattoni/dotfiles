@@ -15,11 +15,12 @@
 }
 
 window {
-  width: 24%;
+  width: 20%;
+  border-radius: 12;
 }
 
 element {
-  padding: 16;
+  padding: 12;
   text-color: @white;
 }
 
@@ -46,13 +47,13 @@ inputbar {
 prompt {
   background-color: @charade;
   enabled: true;
-  padding: 16 0 0 16;
+  padding: 12 0 0 16;
   text-color: @white;
 }
 
 entry {
   background-color: @charade;
-  padding: 16;
+  padding: 12;
   text-color: @white;
 }
 
