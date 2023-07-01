@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 32,
+    "height": 36,
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["wlr/workspaces"],
     "modules-center": [],
