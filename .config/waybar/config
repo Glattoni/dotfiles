@@ -5,7 +5,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["wlr/workspaces"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "clock", "tray"],
+    "modules-right": ["pulseaudio", "clock", "tray"],
     "wlr/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -34,7 +34,7 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%R   %d/%m/%y  }",
+        "format": "{:%R    %d/%m/%y  }",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "network": {
