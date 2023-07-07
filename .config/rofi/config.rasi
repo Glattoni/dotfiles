@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applicatons:";
   display-window: "Windows:";
   drun-display-format: "{icon}  {name}";
-  font: "Cantarella 12";
+  font: "Cantarell 12";
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "kora-pgrey";
