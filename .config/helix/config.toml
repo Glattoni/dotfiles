@@ -1,10 +1,30 @@
-theme = "gruvbox"
+theme = "catppuccin_mocha"
 
 [editor]
 cursorline = true
+bufferline = 'multiple'
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 [editor.indent-guides]
 render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = false
+
+
+[editor.cursor-shape]
+normal = 'block'
+insert = 'bar'
+select = 'block'
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
