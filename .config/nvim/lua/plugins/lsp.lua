@@ -21,10 +21,10 @@ local diagnostics_config = {
 }
 
 local function on_attach(client, buffer)
-  define_lsp_sign({ name = 'DiagnosticSignError', text = ' ' })
-  define_lsp_sign({ name = 'DiagnosticSignWarn', text = ' ' })
-  define_lsp_sign({ name = 'DiagnosticSignHint', text = ' ' })
-  define_lsp_sign({ name = 'DiagnosticSignInfo', text = ' ' })
+  define_lsp_sign({ name = 'DiagnosticSignError', text = '' })
+  define_lsp_sign({ name = 'DiagnosticSignWarn', text = '' })
+  define_lsp_sign({ name = 'DiagnosticSignHint', text = '' })
+  define_lsp_sign({ name = 'DiagnosticSignInfo', text = '' })
 
   vim.diagnostic.config(diagnostics_config)
 
@@ -62,11 +62,11 @@ return {
     require('mason').setup({
       ui = {
         icons = {
-          package_installed = "✓",
-          package_pending = "➜",
-          package_uninstalled = "✗"
-        }
-      }
+          package_installed = '✓',
+          package_pending = '➜',
+          package_uninstalled = '✗',
+        },
+      },
     })
 
     require('mason-lspconfig').setup({

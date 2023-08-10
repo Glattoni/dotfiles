@@ -42,7 +42,7 @@ return {
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip' },
-        { name = 'buffer',  keyword_length = 4 },
+        { name = 'buffer', keyword_length = 4 },
         { name = 'path' },
       }),
       formatting = {
@@ -50,7 +50,7 @@ return {
         format = require('lspkind').cmp_format({
           -- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
           mode = 'symbol',
-          maxwidth = 50,         -- max characters
+          maxwidth = 50, -- max characters
           ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
           -- popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
           before = function(entry, vim_item)

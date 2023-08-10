@@ -1,8 +1,8 @@
 return {
-  "akinsho/bufferline.nvim",
+  'akinsho/bufferline.nvim',
   dependencies = 'nvim-tree/nvim-web-devicons',
   config = function()
-    require("bufferline").setup {
+    require('bufferline').setup({
       options = {
         max_name_length = 18,
         max_prefix_length = 15,
@@ -20,6 +20,6 @@ return {
         sort_by = 'id',
       },
       highlights = require('catppuccin.groups.integrations.bufferline').get(),
-    }
-  end
+    })
+  end,
 }

@@ -6,7 +6,8 @@ keymap.set('n', '<C-s>', ':w<CR>', opts)
 keymap.set('i', '<C-s>', '<esc>:w<CR>', opts)
 
 -- Bufferline
-keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', opts) keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
+keymap.set('n', '<Tab>', ':BufferLineCycleNext<CR>', opts)
+keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', opts)
 keymap.set('n', '<Leader>x', ':BufferLinePickClose<CR>', opts)
 keymap.set('n', '<Leader>pb', ':BufferLineTogglePin<CR>', opts)
 keymap.set('n', '<Leader>bmn', ':BufferLineMoveNext<CR>', opts)

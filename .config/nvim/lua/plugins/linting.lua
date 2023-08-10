@@ -1,5 +1,5 @@
 return {
-  "mfussenegger/nvim-lint",
+  'mfussenegger/nvim-lint',
   config = function()
     require('lint').linters_by_ft = {
       lua = { 'luacheck' },
@@ -8,5 +8,5 @@ return {
       javascriptreact = { 'eslint_d' },
       typescriptreact = { 'eslint_d' },
     }
-  end
+  end,
 }

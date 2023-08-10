@@ -45,8 +45,15 @@ vim.api.nvim_create_autocmd('QuitPre', {
 })
 
 -- Linting
-vim.api.nvim_create_autocmd({ "BufWritePost", "LspAttach" }, {
+vim.api.nvim_create_autocmd({ 'BufWritePost', 'LspAttach' }, {
   callback = function()
-    require("lint").try_lint()
+    require('lint').try_lint()
+  end,
+})
+
+-- Highlight on yank
+vim.api.nvim_create_autocmd('BufWritePost', {
+  callback = function()
+    vim.cmd([[:FormatWrite]])
   end,
 })
