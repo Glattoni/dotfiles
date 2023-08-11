@@ -1,3 +1,5 @@
+local map = require('utils').map
+
 local define_lsp_sign = function(opts)
   vim.fn.sign_define(opts.name, {
     texthl = opts.name,
@@ -5,6 +7,13 @@ local define_lsp_sign = function(opts)
     numhl = '',
   })
 end
+
+local sings = {
+  { name = 'DiagnosticSignError', text = '' },
+  { name = 'DiagnosticSignWarn', text = '' },
+  { name = 'DiagnosticSignHint', text = '' },
+  { name = 'DiagnosticSignInfo', text = '' },
+}
 
 local diagnostics_config = {
   virtual_text = false,
@@ -21,10 +30,9 @@ local diagnostics_config = {
 }
 
 local function on_attach(client, buffer)
-  define_lsp_sign({ name = 'DiagnosticSignError', text = '' })
-  define_lsp_sign({ name = 'DiagnosticSignWarn', text = '' })
-  define_lsp_sign({ name = 'DiagnosticSignHint', text = '' })
-  define_lsp_sign({ name = 'DiagnosticSignInfo', text = '' })
+  for _, v in pairs(sings) do
+    define_lsp_sign({ name = v.name, text = v.text })
+  end
 
   vim.diagnostic.config(diagnostics_config)
 
@@ -34,10 +42,10 @@ local function on_attach(client, buffer)
   handlers['textDocument/hover'] = vim.lsp.with(handlers.hover, { border = 'rounded' })
   handlers['textDocument/signatureHelp'] = vim.lsp.with(handlers.signature_help, { border = 'rounded' })
 
-  vim.keymap.set('n', 'gl', vim.diagnostic.open_float, keymap_opts)
-  vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
-  vim.keymap.set('n', ']d', vim.diagnostic.goto_next, keymap_opts)
-  vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, keymap_opts)
+  map('n', 'gl', vim.diagnostic.open_float, keymap_opts)
+  map('n', '[d', vim.diagnostic.goto_prev, keymap_opts)
+  map('n', ']d', vim.diagnostic.goto_next, keymap_opts)
+  map('n', '<space>q', vim.diagnostic.setloclist, keymap_opts)
 end
 
 local servers = {

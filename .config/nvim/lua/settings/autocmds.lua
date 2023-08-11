@@ -1,8 +1,10 @@
+local map = require('utils').map
+
 vim.api.nvim_create_autocmd('LspAttach', {
   desc = 'LSP actions',
   callback = function(event)
     local bufopts = { buffer = event.buf }
-    local map = vim.keymap.set
+
     map('n', 'gD', vim.lsp.buf.declaration, bufopts)
     map('n', 'gd', vim.lsp.buf.definition, bufopts)
     map('n', 'K', vim.lsp.buf.hover, bufopts)
