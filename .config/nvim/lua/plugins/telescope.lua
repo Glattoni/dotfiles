@@ -3,7 +3,10 @@ return {
   branch = '0.1.x',
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
-    require('telescope').setup({
+    local telescope = require('telescope')
+
+    telescope.load_extension('harpoon')
+    telescope.setup({
       defaults = {
         prompt_prefix = ' ',
         selection_caret = ' ',
@@ -24,6 +27,10 @@ return {
           previewer = false,
         },
         live_grep = {
+          theme = 'dropdown',
+          previewer = false,
+        },
+        harpoon = {
           theme = 'dropdown',
           previewer = false,
         },

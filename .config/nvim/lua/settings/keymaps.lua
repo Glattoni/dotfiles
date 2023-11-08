@@ -42,3 +42,14 @@ map('n', '<C-l>', '<C-w>l', opts)
 map('n', '<Leader>jr', ':lua require("jester").run()<CR>', opts)
 map('n', '<Leader>jrf', ':lua require("jester").run_file()<CR>', opts)
 map('n', '<Leader>jrl', ':lua require("jester").run_last()<CR>', opts)
+
+-- Harpoon
+map('n', '<Leader>h', ':lua require("harpoon.mark").add_file()<CR>', opts)
+map('n', '<Leader>1', ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
+map('n', '<Leader>2', ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
+map('n', '<Leader>3', ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+map('n', '<Leader>4', ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+map('n', '<Leader>fh', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
+
+map('n', '<Leader>hn', ':lua require("harpoon.ui").nav_next()<CR>', opts)
+map('n', '<Leader>hp', ':lua require("harpoon.ui").nav_prev()<CR>', opts)
