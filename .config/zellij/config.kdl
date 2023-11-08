@@ -255,13 +255,13 @@ keybinds clear-defaults=true {
 //
 // on_force_close "quit"
 
-simplified_ui false
+simplified_ui true
 
 // default_shell "fish"
 
 pane_frames false
 
-theme "catppuccin-mocha" 
+theme "zenwritten-dark"
 
 default_layout "compact"
 
@@ -341,6 +341,7 @@ plugins {
 ui {
     pane_frames {
         rounded_corners true
+        hide_session_name true
     }
 }
 themes {
@@ -448,5 +449,17 @@ themes {
       black "#181825" // Mantle
       white "#cdd6f4"
     }
+    zenwritten-dark {
+      bg "#191919"
+      fg "#bbbbbb"
+      red "#de6e7c"
+      green "#819b69"
+      blue "#6099c0"
+      yellow "#b77e64"
+      magenta "#b279a7"
+      orange "#fab387"
+      cyan "#66a5ad"
+      black "#191919"
+      white "#bbbbbb"
+    }
 }
-
