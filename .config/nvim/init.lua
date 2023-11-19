@@ -15,5 +15,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.opt.fillchars:append('eob: ')
 require('lazy').setup('plugins')
 require('settings')

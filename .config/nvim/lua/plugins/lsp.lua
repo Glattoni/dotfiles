@@ -29,7 +29,7 @@ local diagnostics_config = {
   },
 }
 
-local function on_attach(client, buffer)
+local function on_attach(_, buffer)
   for _, v in pairs(sings) do
     define_lsp_sign({ name = v.name, text = v.text })
   end
