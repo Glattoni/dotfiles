@@ -19,7 +19,7 @@ return {
         always_show_bufferline = false,
         sort_by = 'id',
       },
-      highlights = require('catppuccin.groups.integrations.bufferline').get(),
+      -- highlights = require('catppuccin.groups.integrations.bufferline').get(),
     })
   end,
 }
