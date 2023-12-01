@@ -2,7 +2,6 @@ return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
     'windwp/nvim-ts-autotag',
-    'JoosepAlviste/nvim-ts-context-commentstring',
   },
   build = ':TSUpdate',
   config = function()
@@ -13,10 +12,6 @@ return {
       },
       autotag = {
         enable = true,
-      },
-      context_commentstring = {
-        enable = true,
-        enable_autocmd = false,
       },
     })
   end,

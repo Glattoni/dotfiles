@@ -1,8 +1,13 @@
 -- Make sure to set `mapleader` before lazy so your mappings are correct
 vim.g.mapleader = ' '
+
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- skip backwards compatibility routines and speed up loading.
+vim.g.skip_ts_context_commentstring_module = true
+
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -15,6 +20,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
+
+-- hide end of buffer
 vim.opt.fillchars:append('eob: ')
-require('lazy').setup('plugins')
+
 require('settings')
+require('lazy').setup('plugins')
