@@ -55,6 +55,7 @@ local servers = {
   'cssls',
   'lua_ls',
   'taplo',
+  'marksman',
 }
 
 return {
