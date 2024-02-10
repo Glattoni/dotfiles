@@ -53,3 +53,6 @@ map('n', '<Leader>fh', ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opt
 
 map('n', '<Leader>hn', ':lua require("harpoon.ui").nav_next()<CR>', opts)
 map('n', '<Leader>hp', ':lua require("harpoon.ui").nav_prev()<CR>', opts)
+
+-- Zen mode
+map('n', '<Leader>z', ':ZenMode<CR>', opts)
