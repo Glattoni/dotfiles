@@ -34,7 +34,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%R    %d/%m/%y  }",
+        //"format": "{:%R %d/%m/%y}",
+        "format": "{:%I:%M %p %a %b %d}",
+        //ddd MMM dd yyyy
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "network": {
@@ -49,7 +51,7 @@
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}  {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

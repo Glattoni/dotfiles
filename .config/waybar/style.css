@@ -1,4 +1,5 @@
 @define-color silver #bbbbbb;
+@define-color white #e6e6e6;
 @define-color orange #cb4b16;
 
 * {
@@ -56,6 +57,7 @@ button:hover {
 
 #workspaces button.active {
   color: @orange;
+  /* color: @white; */
 }
 
 #workspaces button.urgent {
