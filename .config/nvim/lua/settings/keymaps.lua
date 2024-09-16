@@ -56,3 +56,8 @@ map('n', '<Leader>hp', ':lua require("harpoon.ui").nav_prev()<CR>', opts)
 
 -- Zen mode
 map('n', '<Leader>z', ':ZenMode<CR>', opts)
+
+-- Conjure
+map('n', '<Leader>c', ':ConjureEval<CR>', opts)
+map('n', '<Leader>cf', ':ConjureEvalFile<CR>', opts)
+map('n', '<Leader>cv', ':ConjureLogVSplit<CR>', opts)

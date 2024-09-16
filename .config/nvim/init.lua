@@ -8,6 +8,9 @@ vim.g.loaded_netrwPlugin = 1
 -- skip backwards compatibility routines and speed up loading.
 vim.g.skip_ts_context_commentstring_module = true
 
+-- Disable the documentation mapping for conjure
+vim.g['conjure#mapping#doc_word'] = false
+
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
