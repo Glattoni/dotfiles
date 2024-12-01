@@ -49,7 +49,7 @@ local function on_attach(_, buffer)
 end
 
 local servers = {
-  'tsserver',
+  'ts_ls',
   'emmet_ls',
   'angularls',
   'cssls',
