@@ -1,23 +1,15 @@
 local map = require('utils').map
 
-local define_lsp_sign = function(opts)
-  vim.fn.sign_define(opts.name, {
-    texthl = opts.name,
-    text = opts.text,
-    numhl = '',
-  })
-end
-
-local sings = {
-  { name = 'DiagnosticSignError', text = '' },
-  { name = 'DiagnosticSignWarn', text = '' },
-  { name = 'DiagnosticSignHint', text = '' },
-  { name = 'DiagnosticSignInfo', text = '' },
-}
-
 local diagnostics_config = {
   virtual_text = false,
-  signs = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '',
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.INFO] = '',
+      [vim.diagnostic.severity.HINT] = '',
+    },
+  },
   update_in_insert = true,
   underline = true,
   severity_sort = false,
@@ -30,10 +22,6 @@ local diagnostics_config = {
 }
 
 local function on_attach(_, buffer)
-  for _, v in pairs(sings) do
-    define_lsp_sign({ name = v.name, text = v.text })
-  end
-
   vim.diagnostic.config(diagnostics_config)
 
   local handlers = vim.lsp.handlers

@@ -7,7 +7,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     map('n', 'gD', vim.lsp.buf.declaration, bufopts)
     map('n', 'gd', vim.lsp.buf.definition, bufopts)
-    map('n', 'K', vim.lsp.buf.hover, bufopts)
+    map('n', 'K', function()
+      vim.lsp.buf.hover({ border = 'rounded' })
+    end, bufopts)
     map('n', 'gi', vim.lsp.buf.implementation, bufopts)
     map('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
     map('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)

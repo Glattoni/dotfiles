@@ -108,5 +108,15 @@ return {
         require('dap').continue()
       end,
     },
+    {
+      '<leader>lj',
+      function()
+        if vim.fn.filereadable then
+          require('dap.ext.vscode').load_launchjs()
+          print('Loading launch json')
+        end
+        require('dap').continue()
+      end,
+    },
   },
 }
