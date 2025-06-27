@@ -1,10 +1,17 @@
-return {
-  'mcchrish/zenbones.nvim',
-  priority = 1000,
-  dependencies = {
-    'rktjmp/lush.nvim',
-  },
-  config = function()
-    vim.cmd([[colorscheme zenwritten]])
-  end,
-}
+local add = MiniDeps.add
+
+add({
+  source = "zenbones-theme/zenbones.nvim",
+  depends = { "rktjmp/lush.nvim" },
+})
+
+add({
+  source = "webhooked/kanso.nvim",
+})
+
+require("kanso").setup({
+  italics = false,
+})
+
+-- vim.cmd.colorscheme("zenwritten")
+vim.cmd("colorscheme kanso-zen")

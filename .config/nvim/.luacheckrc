@@ -1,7 +1,7 @@
 globals = {
-  'vim',
-  'describe',
-  'it',
-  'assert',
-  'packer_bootstrap',
+  "vim",
+  "describe",
+  "it",
+  "assert",
+  "MiniPick",
 }
