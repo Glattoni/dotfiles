@@ -1,8 +1,5 @@
 -- stylua: ignore start
 
--- Netrw
--- vim.keymap.set('n', '<Leader>e', ':Lexplore<CR>')
-
 -- Easier navigation between windows
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -34,7 +31,7 @@ vim.keymap.set("n", "<leader>td", function() vim.diagnostic.enable(not vim.diagn
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require("harpoon"):list():add() end)
-vim.keymap.set("n", "<leader>h", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list()) end)
+vim.keymap.set("n", "<leader>h", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list(), { border = "rounded", ui_max_width = 60 }) end)
 
 vim.keymap.set("n", "<leader>1", function() require("harpoon"):list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() require("harpoon"):list():select(2) end)

@@ -4,4 +4,5 @@ globals = {
   "it",
   "assert",
   "MiniPick",
+  "MiniDeps",
 }
