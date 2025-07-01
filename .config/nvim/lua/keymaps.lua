@@ -31,7 +31,7 @@ vim.keymap.set("n", "<leader>td", function() vim.diagnostic.enable(not vim.diagn
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function() require("harpoon"):list():add() end)
-vim.keymap.set("n", "<leader>h", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list(), { border = "rounded", ui_max_width = 60 }) end)
+vim.keymap.set("n", "<leader>fh", function() require("harpoon").ui:toggle_quick_menu(require("harpoon"):list(), { border = "rounded", ui_max_width = 60 }) end)
 
 vim.keymap.set("n", "<leader>1", function() require("harpoon"):list():select(1) end)
 vim.keymap.set("n", "<leader>2", function() require("harpoon"):list():select(2) end)
@@ -41,3 +41,7 @@ vim.keymap.set("n", "<leader>4", function() require("harpoon"):list():select(4) 
 -- Toggle previous & next buffers stored within Harpoon list
 vim.keymap.set("n", "<c-p>", function() require("harpoon"):list():prev() end)
 vim.keymap.set("n", "<c-n>", function() require("harpoon"):list():next() end)
+
+-- Git signs
+vim.keymap.set('n', '<Leader>bl', ':Gitsigns blame_line<CR>')
+vim.keymap.set('n', '<Leader>ph', ':Gitsigns preview_hunk<CR>')
